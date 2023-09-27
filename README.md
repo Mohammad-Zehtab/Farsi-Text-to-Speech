@@ -13,6 +13,7 @@ cd TensorFlowTTS
 pip install .
 
 tensorflow-tts-preprocess --rootdir ./dataset --outdir ./dump --config preprocess/ljspeech_preprocess.yaml --dataset ljspeech
+
 tensorflow-tts-normalize --rootdir ./dump --outdir ./dump --config preprocess/ljspeech_preprocess.yaml --dataset ljspeech
 
 CUDA_VISIBLE_DEVICES=0 python examples/tacotron2/train_tacotron2.py \
